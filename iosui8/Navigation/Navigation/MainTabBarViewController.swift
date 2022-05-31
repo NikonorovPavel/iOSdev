@@ -11,7 +11,8 @@ class MainTabBarViewController: UITabBarController {
     
     let feedVC = FeedViewController()
     let profileVC = ProfileViewController()
-
+    let logInVC = LogInViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UITabBar.appearance().barTintColor = .systemBlue
@@ -24,10 +25,10 @@ class MainTabBarViewController: UITabBarController {
         feedVC.tabBarItem.title = "Feed"
         feedVC.tabBarItem.image = UIImage(systemName: "house")
 
-        let profileNavigationController = UINavigationController(rootViewController: profileVC)
-        profileVC.navigationItem.title = "Profile"
-        profileVC.tabBarItem.title = "Profile"
-        profileVC.tabBarItem.image = UIImage(systemName: "person.crop.circle")
+        let profileNavigationController = UINavigationController(rootViewController: logInVC)
+        logInVC.navigationItem.title = "Profile"
+        logInVC.tabBarItem.title = "Profile"
+        logInVC.tabBarItem.image = UIImage(systemName: "person.crop.circle")
 
         viewControllers = [feedNavigationController, profileNavigationController]
     }
